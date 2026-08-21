@@ -1,0 +1,65 @@
+{
+  "root": {
+    "props": {}
+  },
+  "content": [
+    {
+      "type": "Nav",
+      "props": {
+        "id": "page-nav",
+        "items": {
+          "$bind": "site.nav"
+        },
+        "variant": "horizontal",
+        "backgroundColor": "#ffffff",
+        "textColor": "#09090b"
+      }
+    },
+    {
+      "type": "FeatureGrid",
+      "props": {
+        "title": "",
+        "columns": 2,
+        "spacing": "md",
+        "backgroundColor": "#ffffff",
+        "textColor": "#09090b",
+        "features": [
+          {
+            "icon": "✦",
+            "title": "Fonctionnalité",
+            "description": "Décrivez la valeur de cette fonctionnalité."
+          },
+          {
+            "icon": "✦",
+            "title": "bluetooth",
+            "description": ""
+          }
+        ],
+        "id": "FeatureGrid-686e6312-506b-400f-afa6-57ee0a761982"
+      }
+    },
+    {
+      "type": "PageContent",
+      "props": {
+        "id": "page-content",
+        "showTitle": true,
+        "showDate": true
+      }
+    },
+    {
+      "type": "Footer",
+      "props": {
+        "id": "page-footer",
+        "siteName": {
+          "$bind": "site.title"
+        },
+        "tagline": "",
+        "links": [],
+        "copyright": "",
+        "backgroundColor": "#f7f7f8",
+        "textColor": "#09090b"
+      }
+    }
+  ],
+  "zones": {}
+}
