@@ -1,0 +1,83 @@
+{
+  "root": {
+    "props": {}
+  },
+  "content": [
+    {
+      "type": "Nav",
+      "props": {
+        "id": "home-nav",
+        "items": {
+          "$bind": "site.nav"
+        },
+        "variant": "horizontal",
+        "backgroundColor": "#ffffff",
+        "textColor": "#09090b"
+      }
+    },
+    {
+      "type": "Hero",
+      "props": {
+        "id": "home-hero",
+        "eyebrow": "never seen before",
+        "title": "StampSite1",
+        "subtitle": "Retrouvez ici les derniers articles du site.\nbest ever",
+        "ctaLabel": "",
+        "ctaUrl": "",
+        "align": "left",
+        "spacing": "md",
+        "backgroundColor": "#ffffff",
+        "textColor": "#09090b"
+      }
+    },
+    {
+      "type": "Repeater",
+      "props": {
+        "content": [
+          {
+            "type": "ArticleTeaser",
+            "props": {
+              "id": "home-repeater-teaser",
+              "title": {
+                "$bind": "item.title"
+              },
+              "date": {
+                "$bind": "item.date"
+              },
+              "excerpt": {
+                "$bind": "item.excerpt"
+              },
+              "url": {
+                "$bind": "item.url"
+              },
+              "accentColor": "#1d4ed8"
+            }
+          }
+        ],
+        "id": "home-repeater",
+        "source": {
+          "$bind": "collection",
+          "from": "blog",
+          "sortBy": "date",
+          "order": "desc",
+          "limit": 5
+        }
+      }
+    },
+    {
+      "type": "Footer",
+      "props": {
+        "id": "home-footer",
+        "siteName": {
+          "$bind": "site.title"
+        },
+        "tagline": "",
+        "links": [],
+        "copyright": "",
+        "backgroundColor": "#f7f7f8",
+        "textColor": "#09090b"
+      }
+    }
+  ],
+  "zones": {}
+}
